@@ -1,5 +1,7 @@
 package lab1;
 
+// Lab 1 is a revision lab for last semester.
+
 public class Q1 {
     public static void main(String[] args) {
         int n = 5;
