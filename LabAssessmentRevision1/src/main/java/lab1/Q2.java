@@ -1,26 +1,20 @@
 package lab1;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class Q2 {
     public static void main(String[] args) {
-        var list = new ArrayList<String>();
+        String[] arr = {"Alan", "Larry", "Greg", "Harry"};
+        String key = "Darryl";
 
-        String[] words = {"Hello","Hey","Dog","Apple","Restaurant","Red","Stove"};
+        System.out.println(findMyString(arr, key));
 
-        String key = "Stove";
-
-        Collections.addAll(list, words);
-
-        System.out.println(findMyString(list, key));
     }
 
-    public static int findMyString(ArrayList<String> arr, String key) {
-        if(arr.contains(key))
-            return arr.indexOf(key);
-
+    public static int findMyString(String[] arr, String key) {
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i].equals(key)) {
+                return i;
+            }
+        }
         return -1;
     }
 }
-
