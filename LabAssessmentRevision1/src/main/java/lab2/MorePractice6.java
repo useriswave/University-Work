@@ -6,11 +6,11 @@ import java.util.Collections;
 public class MorePractice6 {
     public static void main(String[] args) {
         Integer[] nta = {2, 5, 7};
-        var list = new ArrayList<Integer>();
+        var nos = new ArrayList<Integer>();
         int num = 3;
-        Collections.addAll(list, nta);
-        adder(list, num);
-        System.out.println(list);
+        Collections.addAll(nos, nta);
+        adder(nos, num);
+        System.out.println(nos);
     }
 
     public static void adder(ArrayList<Integer> nos, int num) {
