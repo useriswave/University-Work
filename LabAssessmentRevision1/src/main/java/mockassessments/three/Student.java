@@ -35,11 +35,15 @@ public class Student {
     }
 
     public boolean registerCourse(Course course) {
-        if(course.getOffered() && course.getCredits() < MAX_CREDITS) {
+        if(course.getOffered() && this.totalCredits() + course.getCredits() <= MAX_CREDITS) {
             this.courses.add(course);
             return true;
         }
         return false;
     }
 
+    @Override
+    public String toString() {
+       return "name: " + name + ", major: " + major + ", courses: " + courses + ", total credits: " + totalCredits();
+    }
 }
