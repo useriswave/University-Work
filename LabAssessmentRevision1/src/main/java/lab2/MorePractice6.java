@@ -14,11 +14,8 @@ public class MorePractice6 {
     }
 
     public static void adder(ArrayList<Integer> nos, int num) {
-
-        System.out.println(nos);
         for(int i = 0; i < nos.size(); i++) {
-            System.out.println(nos.get(i));
-            nos.set(nos.indexOf(nos.get(i)), nos.get(i)+num);
+            nos.set(i, nos.get(i)+num);
         }
     }
 }
