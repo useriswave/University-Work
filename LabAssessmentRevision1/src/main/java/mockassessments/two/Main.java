@@ -17,6 +17,6 @@ public class Main {
                 largestBook = b;
             }
         }
-        System.out.println("Book with largest amount of pages: " + largestBook);
+        System.out.println("Book with largest amount of pages: " + largestBook.getTitle());
     }
 }

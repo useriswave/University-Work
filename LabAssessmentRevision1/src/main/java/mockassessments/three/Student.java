@@ -8,7 +8,7 @@ public class Student {
     private ArrayList<Course> courses;
     private static final int MAX_CREDITS = 15;
 
-    public Student(String name, String major, ArrayList<Course> courses) {
+    public Student(String name, String major) {
         this.name = name;
         this.major = major;
         this.courses = new ArrayList<Course>();

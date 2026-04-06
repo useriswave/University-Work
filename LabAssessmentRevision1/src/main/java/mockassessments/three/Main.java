@@ -14,7 +14,7 @@ public class Main {
         var courses = new ArrayList<Course>();
         Collections.addAll(courses, english, math, csis, history, physics);
 
-        Student s = new Student("Jerry", "Electrical Engineering", courses);
+        Student s = new Student("Jerry", "Electrical Engineering");
         s.registerCourse(math);
         s.registerCourse(english);
         System.out.println(s);
