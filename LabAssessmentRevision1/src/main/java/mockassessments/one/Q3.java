@@ -12,7 +12,7 @@ public class Q3 {
     }
 
     public static int[] multiplyArray(int[] arr1, int[] arr2) {
-        int[] product = new int[arr1.length];
+        int[] product = new int[(arr1.length+arr2.length) / 2];
         for(int i = 0; i < product.length; i++) {
             product[i] = arr1[i]*arr2[i];
         }
