@@ -2,16 +2,16 @@ package com.me.dynamicarrays.array;
 
 public class Array {
     private int[] list;
-    private int size = 1;
     private int count = 1;
 
     public Array() {
-        this.list = new int[size];
+        this.list = new int[0];
     }
 
     public void add(int number) {
         int[] newList = new int[list.length+1];
         if(count == 1) {
+            list = new int[1];
             list[0] = number;
         }
         else {
@@ -70,12 +70,24 @@ public class Array {
         count++;
     }
 
+    public void clear() {
+        count = 1;
+        list = new int[0];
+    }
+
     @Override
     public String toString() {
         String element = "";
-        for (int e : list) {
-            element += (Integer.toString(e) + ", ");
+
+        if(list.length == 0) {
+            return "[]";
         }
+        else {
+            for (int e : list) {
+                element += (Integer.toString(e) + ", ");
+            }
+        }
+
         return "[" + element.substring(0, element.length()-2) + "]";
     }
 }
