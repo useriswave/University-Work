@@ -11,7 +11,7 @@ public class Array {
     public void add(int number) {
         int[] newList = new int[list.length+1];
         if(count == 1) {
-            list = new int[1];
+        list = new int[1];
             list[0] = number;
         }
         else {
@@ -68,6 +68,15 @@ public class Array {
         }
         list = newList;
         count++;
+    }
+
+    public int get(int index) {
+        for(int i = 0; i < list.length; i++) {
+            if(i == index) {
+                return list[i];
+            }
+        }
+        throw new IllegalArgumentException();
     }
 
     public void clear() {
