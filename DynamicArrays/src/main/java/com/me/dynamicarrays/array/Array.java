@@ -9,7 +9,7 @@ public class Array {
         this.list = new int[size];
     }
 
-    public void insert(int number) {
+    public void add(int number) {
         int[] newList = new int[list.length+1];
         if(count == 1) {
             list[0] = number;
@@ -52,6 +52,22 @@ public class Array {
         }
         list = newList;
         count--;
+    }
+
+    public void insert(int index, int number) {
+        int[] newList = new int[list.length+1];
+        int elementIndex = 0;
+        for(int i = 0; i < count; i++) {
+            if(i != index) {
+                newList[i] = list[elementIndex];
+                elementIndex++;
+            }
+            else {
+                newList[i] = number;
+            }
+        }
+        list = newList;
+        count++;
     }
 
     @Override
