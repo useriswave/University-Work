@@ -30,11 +30,24 @@ public class Array {
 
     public void remove(int number) {
         int[] newList = new int[list.length-1];
-        int index = 0;
+        int elementIndex = 0;
         for(int i = 0; i < count-1; i++) {
             if(list[i] != number) {
-                newList[index] = list[i];
-                index++;
+                newList[elementIndex] = list[i];
+                elementIndex++;
+            }
+        }
+        list = newList;
+        count--;
+    }
+
+    public void removeByIndex(int index) {
+        int[] newList = new int[list.length-1];
+        int elementIndex = 0;
+        for(int i = 0; i < count-1; i++) {
+            if(i != index) {
+                newList[elementIndex] = list[i];
+                elementIndex++;
             }
         }
         list = newList;
