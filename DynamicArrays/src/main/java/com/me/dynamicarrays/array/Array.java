@@ -93,7 +93,7 @@ public class Array {
         }
         else {
             for (int e : list) {
-                element += (Integer.toString(e) + ", ");
+                element += (e + ", ");
             }
         }
 
