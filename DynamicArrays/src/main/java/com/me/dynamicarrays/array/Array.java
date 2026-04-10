@@ -92,9 +92,11 @@ public class Array {
             return "[]";
         }
         else {
+            StringBuilder sb = new StringBuilder();
             for (int e : list) {
-                element += (e + ", ");
+                sb.append(e).append(", ");
             }
+            element = sb.toString();
         }
 
         return "[" + element.substring(0, element.length()-2) + "]";
