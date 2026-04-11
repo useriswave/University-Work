@@ -73,12 +73,7 @@ public class Array {
     }
 
     public int get(int index) {
-        for(int i = 0; i < list.length; i++) {
-            if(i == index) {
-                return list[i];
-            }
-        }
-        throw new IllegalArgumentException();
+        return getElementAtIndex(index);
     }
 
     public void clear() {
