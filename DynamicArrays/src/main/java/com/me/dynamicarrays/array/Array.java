@@ -87,8 +87,17 @@ public class Array {
     }
 
     public int getFirst() {
+        return getElementAtIndex(0);
+    }
+
+
+    public int getLast() {
+        return getElementAtIndex(list.length-1);
+    }
+
+    private int getElementAtIndex(int index) {
         if(list.length >= 1) {
-            return list[0];
+            return list[index];
         }
         throw new NoSuchElementException();
     }
