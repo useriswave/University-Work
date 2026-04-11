@@ -16,8 +16,10 @@ public class Main {
 
         System.out.println(array.get(1));
         System.out.println(array);
+        System.out.println(array.getFirst());
 
         array.clear();
         System.out.println(array);
+
     }
 }

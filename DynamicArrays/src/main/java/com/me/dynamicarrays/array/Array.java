@@ -1,5 +1,7 @@
 package com.me.dynamicarrays.array;
 
+import java.util.NoSuchElementException;
+
 public class Array {
     private int[] list;
     private int count = 1;
@@ -82,6 +84,13 @@ public class Array {
     public void clear() {
         count = 1;
         list = new int[0];
+    }
+
+    public int getFirst() {
+        if(list.length >= 1) {
+            return list[0];
+        }
+        throw new NoSuchElementException();
     }
 
     @Override
