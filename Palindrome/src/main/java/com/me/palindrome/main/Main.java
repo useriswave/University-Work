@@ -19,5 +19,7 @@ public class Main {
                 break;
             }
         }
+        Prompt.close();
+        System.out.println("Program closed.");
     }
 }
