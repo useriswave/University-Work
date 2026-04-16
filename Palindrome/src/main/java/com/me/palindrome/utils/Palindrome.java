@@ -5,11 +5,12 @@ public class Palindrome {
     private Palindrome() {}
 
     public static boolean isPalindrome(String word) {
-        String reversed = "";
-       for(int i = word.length() - 1; i >= 0; i--)  {
-           reversed += word.charAt(i);
-       }
+        var sb = new StringBuilder();
 
-       return reversed.equalsIgnoreCase(word);
+        for(int i = 0; i < word.length(); i++) {
+            sb.append(word.charAt(word.length() - i - 1));
+        }
+
+        return sb.toString().equalsIgnoreCase(word);
     }
 }
