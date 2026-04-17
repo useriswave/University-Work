@@ -2,27 +2,21 @@ package com.me.dynamicarrays.main;
 
 import com.me.dynamicarrays.array.Array;
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
+        Random r = new Random();
         Array array = new Array();
 
-        array.add(59);
-        array.add(382);
-        array.add(4895);
+        for(int i = 0; i < 10; i++) {
+            array.add(r.nextInt(0, 50));
+        }
 
-        System.out.println(array);
+        System.out.println("Before sort: " + array);
 
-        System.out.println("First Element:" + array.getFirst());
-        System.out.println("Last Element:" + array.getLast());
+        array.sort();
 
-        array.insert(2, 60);
-        array.removeByIndex(1);
-        array.remove(array.get(0));
-
-        System.out.println(array.get(1));
-        System.out.println(array);
-
-        array.clear();
-        System.out.println(array);
+        System.out.println("After sort:  " + array);
     }
 }
