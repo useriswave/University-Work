@@ -1,4 +1,4 @@
-package com.me.assessment2.mock3;
+package com.me.assessment2.mock3.interfaces;
 
 /**
  * interface that calculates tax for taxable objects
@@ -13,5 +13,5 @@ public interface Taxable {
      * calculates tax for taxable objects
      * @return the tax amount for a taxable object
      */
-    public double getTax();
+   public double getTax();
 }

@@ -1,8 +1,10 @@
-package com.me.assessment2.mock3;
+package com.me.assessment2.mock3.products;
+
+import com.me.assessment2.mock3.interfaces.Shippable;
 
 public class Book extends Product implements Shippable {
-    private String author;
-    private int numPages;
+    private final String author;
+    private final int numPages;
 
     public Book(String author, int numPages, String name, double price) {
         super(name, price);

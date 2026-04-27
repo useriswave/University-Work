@@ -1,4 +1,4 @@
-package com.me.assessment2.mock3;
+package com.me.assessment2.mock3.interfaces;
 
 /**
  * Interface for shippable objects

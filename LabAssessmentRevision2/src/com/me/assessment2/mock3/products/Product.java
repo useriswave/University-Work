@@ -1,4 +1,4 @@
-package com.me.assessment2.mock3;
+package com.me.assessment2.mock3.products;
 
 /**
  * Represents a product in a store.
