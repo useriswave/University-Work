@@ -1,0 +1,18 @@
+Line: 1
+Total of all numbers: 178.5
+Number of all non numeric words: 3
+Number of times 'hello' appears: 1
+Encoded words len <= 4Cpc, qbtt
+
+Line: 2
+Total of all numbers: 156.25
+Number of all non numeric words: 3
+Number of times 'hello' appears: 0
+Encoded words len <= 4Cfo, gbjm, pl
+
+Line: 3
+Total of all numbers: 167.5
+Number of all non numeric words: 3
+Number of times 'hello' appears: 0
+Encoded words len <= 4qbtt
+
