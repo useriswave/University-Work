@@ -8,6 +8,9 @@ public class String2DArray {
         boolean[][] results = isPalindrome(words);
         System.out.println("WORDS:");
         System.out.println(Arrays.deepToString(words));
+        String [][] revved = reverseStrings(words);
+        System.out.println("WORDS REVERSED:");
+        System.out.println(Arrays.deepToString(revved));
         System.out.println("RESULTS:");
         System.out.println(Arrays.deepToString(results));
     }
@@ -28,5 +31,24 @@ public class String2DArray {
             }
         }
         return result;
+    }
+
+    public static String[][] reverseStrings(String[][] words) {
+        String[][] reversed = new String[words.length][];
+
+        for(int i = 0; i < words.length; i++) {
+            reversed[i] = new String[words[i].length];
+        }
+
+        for(int i = 0; i < words.length; i++) {
+            for(int j = 0; j < words[i].length; j++) {
+                String rw = "";
+                for(int k = 0; k < words[i][j].length(); k++) {
+                    rw += words[i][j].charAt(words[i][j].length() - 1 - k);
+                }
+                reversed[i][j] = rw;
+            }
+        }
+        return reversed;
     }
 }
