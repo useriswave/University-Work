@@ -7,10 +7,12 @@ public class String2DArray {
         String[][] words = {{"racecar", "kayak", "jerry"}, {"Improvement", "Black", "Google", "Apple"}, {"rows", "mom"}};
         boolean[][] results = isPalindrome(words);
         System.out.println("WORDS:");
-        System.out.println(Arrays.deepToString(words));
+        displayContent(words);
+//        System.out.println(Arrays.deepToString(words));
         String [][] revved = reverseStrings(words);
         System.out.println("WORDS REVERSED:");
-        System.out.println(Arrays.deepToString(revved));
+//        System.out.println(Arrays.deepToString(revved));
+        displayContent(revved);
         System.out.println("RESULTS:");
         System.out.println(Arrays.deepToString(results));
     }
@@ -50,5 +52,15 @@ public class String2DArray {
             }
         }
         return reversed;
+    }
+
+    public static void displayContent(String[][] arr) {
+        for(int i = 0; i < arr.length; i++) {
+            System.out.println("Row: " + i);
+            for(int j = 0; j < arr[i].length; j++) {
+                System.out.println("\t" + j + ": " + arr[i][j]);
+            }
+            System.out.println("---------------");
+        }
     }
 }
