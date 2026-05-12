@@ -1,4 +1,4 @@
-package org.example;
+package org.example.one;
 // exam 2 AND finals AND lab 11
 import java.util.Arrays;
 
