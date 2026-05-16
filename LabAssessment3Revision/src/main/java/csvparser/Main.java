@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        CsvParser csvParser = new CsvParser();
         Random r = new Random();
 
         int size = r.nextInt(5, 11);
@@ -17,25 +16,28 @@ public class Main {
         }
 
         File f = new File("test.csv");
-        if(csvParser.createCSV(f, arr)) {
+        if(CsvParser.createCSV(f, arr)) {
             System.out.println("File \"" + f.getAbsolutePath() + "\" has been successfully created!");
         }
         else {
             System.out.println("File creation failed!");
         }
 
-        String[][] content = csvParser.fillArrayWithCsvContent(f);
-
-        System.out.println("CSV content printed in the console:");
-        for(int i = 0; i < content.length; i++) {
-            for(int j = 0; j < content[i].length; j++) {
-                System.out.print(content[i][j]);
-                if(j != content.length-1)
-                    System.out.print(",");
+        String[][] content = CsvParser.fillArrayWithCsvContent(f);
+        if(content != null) {
+            System.out.println("CSV content printed in the console:");
+            for(int i = 0; i < content.length; i++) {
+                for(int j = 0; j < content[i].length; j++) {
+                    System.out.print(content[i][j]);
+                    if(j != content.length-1)
+                        System.out.print(",");
+                }
+                System.out.println();
             }
-            System.out.println();
         }
-
+        else {
+            System.out.println("ERROR: cannot fill 2d array with csv file content.");
+        }
     }
 
 }

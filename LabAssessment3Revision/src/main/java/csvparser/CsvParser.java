@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class CsvParser {
 
-    public CsvParser() {}
+    private CsvParser() {}
 
-    public boolean createCSV(File f, String[][] content) {
+    public static boolean createCSV(File f, String[][] content) {
 
         if(!f.getName().substring(f.getName().lastIndexOf('.')).equalsIgnoreCase(".csv")) {
             return false;
@@ -37,10 +37,10 @@ public class CsvParser {
 
     /**
      * Creates an empty 2D String array based off the amount of rows and columns in a given CSV file
-     * @param f
+     * @param f file object
      * @return 2D String Array
      */
-    private String[][] int2dArrayRows(File f) {
+    private static String[][] int2dArrayRows(File f) {
 
         if(!f.getName().substring(f.getName().lastIndexOf('.')).equalsIgnoreCase(".csv")) {
             return null;
@@ -50,10 +50,8 @@ public class CsvParser {
             Scanner lineReader = new Scanner(f);
 
             int rows = 0;
-
-            for(int i = 0; lineReader.hasNextLine(); i++) {
-                String line = lineReader.nextLine();
-                rows++;
+            for(; lineReader.hasNextLine(); rows++) {
+                lineReader.nextLine();
             }
 
             lineReader.close();
@@ -66,7 +64,7 @@ public class CsvParser {
         return null;
     }
 
-    private String[][] initEmpty2dArrayCsv(File f) {
+    private static String[][] initEmpty2dArrayCsv(File f) {
         String[][] arr = int2dArrayRows(f);
         if(arr == null)
             return null;
@@ -98,7 +96,7 @@ public class CsvParser {
         return arr;
     }
 
-    public String[][] fillArrayWithCsvContent(File f) {
+    public static String[][] fillArrayWithCsvContent(File f) {
         String[][] arr = initEmpty2dArrayCsv(f);
 
         if(arr != null) {
