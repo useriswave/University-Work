@@ -9,8 +9,8 @@ public class Main {
         Random r = new Random();
         Array array = new Array();
 
-        for(int i = 0; i < 10; i++) {
-            array.add(r.nextInt(0, 50));
+        for (int i = 0; i < r.nextInt(5, 21); i++) {
+            array.add(r.nextInt(0, 51));
         }
 
         System.out.println("Before sort: " + array);

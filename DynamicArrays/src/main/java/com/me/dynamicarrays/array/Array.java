@@ -85,7 +85,6 @@ public class Array {
         return getElementAtIndex(0);
     }
 
-
     public int getLast() {
         return getElementAtIndex(list.length-1);
     }
@@ -94,12 +93,13 @@ public class Array {
         if(list.length >= 1) {
             return list[index];
         }
+
         throw new NoSuchElementException();
     }
 
     public void sort() {
         for(int i = 0; i < list.length - 1; i++) {
-            for(int j = 0; j < list.length -1; j++) {
+            for(int j = 0; j < list.length - 1 - i; j++) {
                 if(list[j] > list[j + 1]) {
                     int temp = list[j];
                     list[j] = list[j+1];
@@ -111,19 +111,16 @@ public class Array {
 
     @Override
     public String toString() {
-        String element = "";
-
-        if(list.length == 0) {
+        if (list.length == 0) {
             return "[]";
         }
-        else {
-            StringBuilder sb = new StringBuilder();
-            for (int e : list) {
-                sb.append(e).append(", ");
-            }
-            element = sb.toString();
+
+        StringBuilder sb = new StringBuilder();
+        for (int e : list) {
+            sb.append(e).append(", ");
         }
 
+        String element = sb.toString();
         return "[" + element.substring(0, element.length()-2) + "]";
     }
 }
