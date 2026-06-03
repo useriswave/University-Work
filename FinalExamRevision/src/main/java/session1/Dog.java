@@ -10,7 +10,8 @@ public class Dog extends Animal
         this.breed = breed;
     }
 
-    public String getBreed() {
+    public String getBreed()
+    {
         return breed;
     }
 

@@ -1,6 +1,7 @@
 package session1;
 
-public class Main {
+public class Main
+{
     public static void main(String[] args)
     {
         Dog a = new Dog("JAGFIOE", 3, false, 4930, "Caterpillar");

@@ -18,21 +18,25 @@ public abstract class Animal
         totalAnimals++;
     }
 
-    public int getAge() {
+    public abstract void makeSound();
+
+    public int getAge()
+    {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age)
+    {
         this.age = age;
     }
 
-    public int getTotalAnimals() {
+    public int getTotalAnimals()
+    {
         return totalAnimals;
     }
 
-    public abstract void makeSound();
-
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 }

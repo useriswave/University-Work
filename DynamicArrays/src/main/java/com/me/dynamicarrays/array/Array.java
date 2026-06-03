@@ -2,19 +2,18 @@ package com.me.dynamicarrays.array;
 
 import java.util.NoSuchElementException;
 
-public class Array {
+public class Array
+{
     private int[] list;
     private int count = 1;
 
-    public Array() {
-        this.list = new int[0];
-    }
+    public Array() { this.list = new int[0]; }
 
     public void add(int number)
     {
         int[] newList = new int[list.length+1];
 
-        if(count == 1) {
+        if (count == 1) {
             list = new int[1];
             list[0] = number;
         }
@@ -22,8 +21,7 @@ public class Array {
             for(int i = 0; i < count; i++) {
                 if(i < list.length) {
                     newList[i] = list[i];
-                }
-                else {
+                } else {
                     newList[i] = number;
                 }
             }
@@ -39,8 +37,8 @@ public class Array {
         int[] newList = new int[list.length-1];
         int elementIndex = 0;
 
-        for(int i = 0; i < count-1; i++) {
-            if(list[i] != number) {
+        for (int i = 0; i < count-1; i++) {
+            if (list[i] != number) {
                 newList[elementIndex] = list[i];
                 elementIndex++;
             }
@@ -55,7 +53,7 @@ public class Array {
         int[] newList = new int[list.length-1];
         int elementIndex = 0;
 
-        for(int i = 0; i < count-1; i++) {
+        for (int i = 0; i < count-1; i++) {
             if(i != index) {
                 newList[elementIndex] = list[i];
                 elementIndex++;
@@ -75,8 +73,7 @@ public class Array {
             if(i != index) {
                 newList[i] = list[elementIndex];
                 elementIndex++;
-            }
-            else {
+            } else {
                 newList[i] = number;
             }
         }
