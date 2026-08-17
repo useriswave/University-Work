@@ -121,13 +121,14 @@ public class Array
         StringBuilder sb = new StringBuilder();
 
         sb.append("[");
-        for (int i = 0; i < list.length; i++) {
-            sb.append(list[i]);
-            if (i < list.length - 1)
-                sb.append(", ");
-        }
-        sb.append("]");
+        String sep = "";
 
+        for (int i = 0; i < list.length; i++) {
+            sb.append(sep, list[i]);
+            sep = ", ";
+        }
+
+        sb.append("]");
         return sb.toString();
     }
 }
